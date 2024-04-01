@@ -18,22 +18,22 @@ form.addEventListener("submit", (evt) => {
     const confirmPassword = confirmPasswordInput.value;
 
     if (!username || !email || !password || !confirmPassword) {
-        alert('Пожалуйста, заполните все поля');
+        alert('Заполните все строки');
         return;
     }
 
     if (!isValidUsername(username)) {
-        alert('Логин может содержать только буквы на латинице и цифры');
+        alert('Логин может содержать только буквы на английском и цифры');
         return;
     }
 
     if (!isValidPassword(password)) {
-        alert('Пароль должен содержать как минимум одну заглавную букву, одну строчную букву и одну цифру');
+        alert('Пароль должен содержать как мин. одну заглавную букву, одну строчную букву и одну цифру');
         return;
     }
 
     if (password !== confirmPassword) {
-        alert('Пароли не совпадают');
+        alert('Введенные пароли не совпадают');
         return;
     }
 
